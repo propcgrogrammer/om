@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>早宣晚結產生器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>早宣晚結產生器</h1>
+
+  <!-- 新增詞彙的輸入框和按鈕 -->
+  <div id="add-word-container">
+    <input type="text" id="new-word" placeholder="輸入新詞彙">
+    <button onclick="addWord()">新增詞彙</button>
+  </div>
+  
+  <!-- 文字池 (POOL) -->
+  <div id="draggable-pool">
+    <div class="draggable" draggable="true" id="item-1">你好，</div>
+    <div class="draggable" draggable="true" id="item-2">這是一個</div>
+    <div class="draggable" draggable="true" id="item-3">可以拖拉的</div>
+    <div class="draggable" draggable="true" id="item-4">元件。</div>
+    <div class="draggable" draggable="true" id="item-5">歡迎使用！</div>
+  </div>
+
+  <!-- 主要區塊容器 -->
+  <div id="main-container">
+    <!-- 左側「早宣」區塊 -->
+    <div id="morning-announcement" class="drop-area" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+      <h2>早宣</h2>
+      <div id="morning-text"></div>
+      <button onclick="generateMorningTemplate()">產生早宣文字</button>
+      <button onclick="copyMorningText()">複製早宣文字</button>
+    </div>
+    
+    <!-- 右側「晚結」區塊 -->
+    <div id="evening-closing" class="drop-area" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+      <h2>晚結</h2>
+      <div id="evening-text"></div>
+      <button onclick="generateEveningTemplate()">產生晚結文字</button>
+      <button onclick="copyEveningText()">複製晚結文字</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

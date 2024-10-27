@@ -1,0 +1,158 @@
+/* 整體頁面樣式 */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f6fc;
+  margin: 0;
+  padding: 20px;
+}
+
+/* 標題樣式 */
+h1 {
+  font-size: 2.5em;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+/* 資訊輸入區 */
+#info-input {
+  background-color: #f1f3fa;
+  border: 2px solid #457b9d;
+  border-radius: 8px;
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#info-input label {
+  font-weight: bold;
+  color: #457b9d;
+  margin-top: 10px;
+}
+
+#info-input input[type="text"],
+#info-input input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  margin-top: 5px;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* 新增詞彙區 */
+#add-word-container {
+  margin: 20px;
+}
+
+#new-word {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/* 按鈕樣式 */
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#add-word-container button {
+  background-color: #4a90e2;
+}
+
+#generate-container button {
+  background-color: #2a9d8f;
+}
+
+#morning-announcement button, #evening-closing button {
+  background-color: #e63946;
+}
+
+/* 文字池樣式 */
+#draggable-pool {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  border: 1px solid #457b9d;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.draggable {
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  color: #333;
+  cursor: grab;
+  user-select: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.draggable:hover {
+  background-color: #f1f3f5;
+}
+
+/* 主要區塊容器 */
+#main-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+/* 早宣、晚結區塊樣式 */
+.drop-area {
+  width: 48%;
+  min-height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#morning-announcement {
+  background-color: #d4f1f4;
+  border: 1px solid #38a1b9;
+}
+
+#evening-closing {
+  background-color: #fce7e8;
+  border: 1px solid #e63946;
+}
+
+.drop-area h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* 早宣、晚結文字容器 */
+#morning-text, #evening-text {
+  color: #495057;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 10px;
+}

@@ -9,6 +9,18 @@
 <body>
   <h1>早宣晚結產生器</h1>
 
+  <!-- 資訊輸入區 -->
+  <div id="info-input">
+    <label for="name">姓名：</label>
+    <input type="text" id="name" placeholder="輸入姓名" oninput="updateName()">
+    
+    <label for="date">日期：</label>
+    <input type="date" id="date">
+
+    <label for="okr">OKR 目標：</label>
+    <input type="text" id="okr" placeholder="輸入 OKR 目標">
+  </div>
+
   <!-- 新增詞彙的輸入框和按鈕 -->
   <div id="add-word-container">
     <input type="text" id="new-word" placeholder="輸入新詞彙">
@@ -32,6 +44,7 @@
       <div id="morning-text"></div>
       <button onclick="generateMorningTemplate()">產生早宣文字</button>
       <button onclick="copyMorningText()">複製早宣文字</button>
+      <button onclick="clearMorningText()">清除早宣區文字</button>
     </div>
     
     <!-- 右側「晚結」區塊 -->
@@ -40,6 +53,7 @@
       <div id="evening-text"></div>
       <button onclick="generateEveningTemplate()">產生晚結文字</button>
       <button onclick="copyEveningText()">複製晚結文字</button>
+      <button onclick="clearEveningText()">清除晚結區文字</button>
     </div>
   </div>
 
